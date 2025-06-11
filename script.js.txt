@@ -1,0 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const confirmButton = document.getElementById('confirmButton');
+    const denyButton = document.getElementById('denyButton');
+    const messageDisplay = document.getElementById('message');
+
+    // 「はい」ボタンがクリックされた時の処理
+    confirmButton.addEventListener('click', () => {
+        // ロイヤルハウスホールドの紹介ページに直接遷移
+        const nextPageUrl = ‘royel.html';
+        window.location.href = nextPageUrl;
+    });
+
+    // 「いいえ」ボタンがクリックされた時の処理
+    denyButton.addEventListener('click', () => {
+        const restrictedPageUrl = 'restricted.html'; // アクセス制限ページ
+        window.location.href = restrictedPageUrl;
+    });
+});

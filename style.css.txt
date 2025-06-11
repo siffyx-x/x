@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    line-height: 1.6; /* 行の高さを調整して読みやすくする */
+    color: #333; /* 全体の文字色 */
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px; /* コンテンツの最大幅を制限して読みやすくする */
+    width: 90%; /* 画面幅に合わせて調整 */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em; /* 見出しのサイズを調整 */
+}
+
+h2 {
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: left; /* 段落のテキストを左寄せに */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* ボタン間の余白 */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-top: 15px;
+}
+
+/* ロイヤルハウスホールド画像のスタイル */
+.whisky-detail-image {
+    max-width: 80%; /* 親要素の幅の80%まで広がる */
+    height: auto;    /* 画像の縦横比を保つ */
+    display: block;  /* 中央寄せのためにブロック要素に */
+    margin: 20px auto; /* 上下に20px、左右は自動（中央寄せ） */
+    border-radius: 8px; /* 角を少し丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+}
