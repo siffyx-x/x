@@ -9,10 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextPageUrl = ‘royel.html';
         window.location.href = nextPageUrl;
     });
-
-    // 「いいえ」ボタンがクリックされた時の処理
-    denyButton.addEventListener('click', () => {
-        const restrictedPageUrl = 'restricted.html'; // アクセス制限ページ
-        window.location.href = restrictedPageUrl;
-    });
 });
