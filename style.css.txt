@@ -8,6 +8,8 @@ body {
     margin: 0;
     line-height: 1.6; /* 行の高さを調整して読みやすくする */
     color: #333; /* 全体の文字色 */
+    padding: 20px; /* ★追加: 画面端に余白を持たせる */
+    box-sizing: border-box; /* ★追加: paddingがwidth/heightに含まれるようにする */
 }
 
 .container {
@@ -17,7 +19,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 800px; /* コンテンツの最大幅を制限して読みやすくする */
-    width: 90%; /* 画面幅に合わせて調整 */
+    width: 100%; /* ★変更: 親要素の幅に合わせて100%に */
+    box-sizing: border-box; /* ★追加: paddingがwidth/heightに含まれるようにする */
 }
 
 h1 {
@@ -36,6 +39,8 @@ h2 {
 p {
     margin-bottom: 15px;
     text-align: left; /* 段落のテキストを左寄せに */
+    /* ★追加: 小さい画面でのフォントサイズ調整 */
+    font-size: 1em; /* 基本のフォントサイズ */
 }
 
 a {
@@ -59,6 +64,9 @@ button {
     font-size: 16px;
     transition: background-color 0.3s ease;
     margin: 5px; /* ボタン間の余白 */
+    width: auto; /* ★追加: ボタンの幅が自動調整されるように */
+    max-width: 100%; /* ★追加: ボタンが親要素からはみ出さないように */
+    box-sizing: border-box; /* ★追加 */
 }
 
 button:hover {
@@ -72,10 +80,53 @@ button:hover {
 
 /* ロイヤルハウスホールド画像のスタイル */
 .whisky-detail-image {
-    max-width: 80%; /* 親要素の幅の80%まで広がる */
+    max-width: 100%; /* ★変更: 親要素の幅に合わせて100%まで広がる */
     height: auto;    /* 画像の縦横比を保つ */
     display: block;  /* 中央寄せのためにブロック要素に */
     margin: 20px auto; /* 上下に20px、左右は自動（中央寄せ） */
     border-radius: 8px; /* 角を少し丸くする */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+}
+
+/* --- レスポンシブ対応の追加 --- */
+@media (max-width: 600px) { /* 画面幅が600px以下の場合のスタイル */
+    body {
+        padding: 15px; /* さらに少し余白を減らす */
+    }
+
+    .container {
+        padding: 20px; /* コンテナのパディングも少し減らす */
+    }
+
+    h1 {
+        font-size: 1.8em; /* 小さい画面では見出しを少し小さく */
+    }
+
+    p {
+        font-size: 0.95em; /* 段落の文字も少し小さくして表示量を確保 */
+    }
+
+    button {
+        padding: 10px 15px; /* ボタンのパディングを調整 */
+        font-size: 15px; /* ボタンの文字サイズも調整 */
+        margin: 5px 2px; /* ボタン間の横余白を少し減らす */
+    }
+}
+
+@media (max-width: 400px) { /* 画面幅が400px以下の場合のスタイル */
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.6em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    button {
+        font-size: 14px;
+        display: block; /* ボタンを縦に並べる場合 */
+        width: 100%; /* 横幅を100%に */
+        margin: 5px 0; /* 縦に並べるので横の余白をなくす */
+    }
 }
